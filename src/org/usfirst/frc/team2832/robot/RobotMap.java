@@ -14,6 +14,8 @@ public class RobotMap {
 	public static final int CLIMBER_LATCH_FORWARD = 4;
     public static final int CLIMBER_LATCH_REVERSE = 5;
     public static final double CLIMBER_WINCH_POWER = 1;
+    
+    public static final int PRESSURE_SENSOR_CHANNEL = 1;
 
 	
 	//encode channel

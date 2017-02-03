@@ -39,6 +39,7 @@ public class DriveTrain extends Subsystem {
 		drive.setSafetyEnabled(true);
 		drive.setSensitivity(0.5);
 		drive.setMaxOutput(1.0);
+		
 
 		// Encoders may measure differently in the real world and in
 		// simulation. In this example the robot moves 0.042 barleycorns
@@ -100,6 +101,10 @@ public class DriveTrain extends Subsystem {
 	public double getDistanceToObstacle() {
 		// Really meters in simulation since it's a rangefinder...
 		return rangefinder.getAverageVoltage();
+	}
+	
+	public void stop(){
+		drive.setLeftRightMotorOutputs(0, 0);
 	}
    
 }

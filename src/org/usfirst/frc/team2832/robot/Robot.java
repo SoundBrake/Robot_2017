@@ -3,6 +3,7 @@ package org.usfirst.frc.team2832.robot;
 import org.usfirst.frc.team2832.robot.commands.Autonomous;
 import org.usfirst.frc.team2832.robot.subsystems.Climber;
 import org.usfirst.frc.team2832.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team2832.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team2832.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -28,6 +29,7 @@ public class Robot extends IterativeRobot {
 	public static Climber climber;
 	public static OI oi;
 	public static Shooter shooter;
+	public static Pneumatics pneumatics;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -40,8 +42,10 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		climber = Climber.getClimber();
 		shooter = new Shooter();
+		pneumatics = new Pneumatics();
 		
 		autonomousCommand = new Autonomous();
+		pneumatics.start();
 		
 	}
 
