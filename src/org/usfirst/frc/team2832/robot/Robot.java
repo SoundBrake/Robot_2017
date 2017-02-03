@@ -3,6 +3,7 @@ package org.usfirst.frc.team2832.robot;
 import org.usfirst.frc.team2832.robot.commands.Autonomous;
 import org.usfirst.frc.team2832.robot.subsystems.Climber;
 import org.usfirst.frc.team2832.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team2832.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
@@ -26,6 +27,7 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static Climber climber;
 	public static OI oi;
+	public static Shooter shooter;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -37,6 +39,7 @@ public class Robot extends IterativeRobot {
 		drivetrain = new DriveTrain();
 		oi = new OI();
 		climber = Climber.getClimber();
+		shooter = new Shooter();
 		
 		autonomousCommand = new Autonomous();
 		
