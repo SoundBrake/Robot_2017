@@ -11,7 +11,10 @@ import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
- *
+ * Author: Jing Xu
+ * Email: jeanxu2000@gmail.com
+ * Date: March 4, 2017
+ * Created for : NavX Rotate
  */
 public class RotateWithAngelTankDrive extends Command implements PIDOutput{
 	
